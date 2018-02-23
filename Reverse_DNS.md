@@ -1,4 +1,4 @@
-## Here is an example that how to do reverse DNS on Azure VM
+### Here is an example that how to do reverse DNS on Azure VM
 
 ####Before you go:
 > The PublicIp allocation method must be static.
