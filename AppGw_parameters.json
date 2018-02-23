@@ -1,0 +1,35 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "addressPrefix": {
+      "value": "172.21.0.0/16"
+    },
+    "subnetPrefix": {
+      "value": "172.21.21.0/24"
+    },
+    "skuName": {
+      "value": "Standard_Small"
+    },
+    "capacity": {
+      "value": 2
+    },
+    "backendIpAddress1": {
+      "value": "114.114.114.114"
+    },
+    "backendIpAddress2": {
+      "value": "8.8.8.8"
+    },
+    "CertData": {
+  		"value": "C:\\domain"
+      },
+  	"CertPassword": {
+  		"reference": {
+  			"keyVault": {
+  				"id": "/subscriptions/80a8bebd-6c4a-4dda-98f2-00151f9c3567/resourceGroups/AppgatewayRG/providers/Microsoft.KeyVault/vaults/LambertVault"
+  			},
+  			"secretName": "passwd"
+  		}
+  	}
+  }
+}
